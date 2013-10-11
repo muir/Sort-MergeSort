@@ -8,7 +8,7 @@ require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = qw(mergesort);
 
-our $VERSION = 0.3;
+our $VERSION = 0.31;
 
 our $max_array = 64;
 
