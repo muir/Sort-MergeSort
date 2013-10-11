@@ -11,5 +11,10 @@ WriteMakefile(
 	'PREREQ_PM' => {
 		'Test::NoWarnings'	=> 0,
 	},
+	'META_MERGE'     => {
+		resources  => {
+			repository => 'http://github.com/muir/Sort-MergeSort',
+		},
+	},
 );
 
