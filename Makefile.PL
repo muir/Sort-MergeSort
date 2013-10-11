@@ -18,3 +18,16 @@ WriteMakefile(
 	},
 );
 
+package MY;
+
+sub postamble {
+    <<"END_OF_POSTAMBLE";
+
+pm_to_blib: README
+
+README: lib/Sort/MergeSort.pm
+\tpod2text lib/Sort/MergeSort.pm > README
+
+END_OF_POSTAMBLE
+}
+

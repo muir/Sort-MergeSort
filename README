@@ -1,0 +1,29 @@
+NAME
+    Sort::MergeSort - merge pre-sorted input streams
+
+SYNOPSIS
+     use Sort::MergeSort;
+
+     my $terator = mergesort($comparefunc, @iterators);
+
+DESCRIPTION
+    Given a comparison function and a bunch of iterators that produce data
+    that is already sorted, "mergesort()" will provide an iterator that
+    produces sorted and merged data from all of the input iterators.
+
+    Sort::MergeSort also works with filehandles. It doesn't care. If it's
+    only input is a filehandle, it will return a filehandle. In all other
+    situations it will return an iterator.
+
+    The $comparefunc takes two arguments. It does not use the implicit $a &
+    $b that perl sort uses.
+
+    The iterators are treated as file handles so any filehandle or
+    Sort::MergeSort::Iterator will do as input.
+
+EXAMPLE
+     use Sort::MergeSort;
+
+SEE ALSO
+    Sort::MergeSort::Iterator
+
